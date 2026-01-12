@@ -1,0 +1,39 @@
+Patient Resource
+Instance: SamplePatient
+InstanceOf: Patient
+Title: "Sample Patient"
+Description: "A sample patient resource for demonstration"
+
+* id = "sample-patient-1"
+* name[0].family = "Sharma"
+* name[0].given[0] = "Amit"
+* gender = #male
+* birthDate = "1988-06-20"
+
+* telecom[0].system = #phone
+* telecom[0].value = "9123456789"
+
+* address[0].city = "Bangalore"
+* address[0].country = "IN"
+Observation Resource
+Instance: SampleBloodPressureObservation
+InstanceOf: Observation
+Title: "Blood Pressure Observation"
+Description: "Sample blood pressure observation for a patient"
+
+* id = "sample-observation-1"
+* status = #final
+
+* code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
+
+* subject = Reference(SamplePatient)
+
+* effectiveDateTime = "2026-01-12T10:30:00+05:30"
+
+* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[0].valueQuantity.value = 118
+* component[0].valueQuantity.unit = "mmHg"
+
+* component[1].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[1].valueQuantity.value = 76
+* component[1].valueQuantity.unit = "mmHg"
