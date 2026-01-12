@@ -1,0 +1,24 @@
+{
+  "resourceType": "Patient",
+  "id": "sample-patient-1",
+  "name": [
+    {
+      "family": "Sharma",
+      "given": ["Amit"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1988-06-20",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "9123456789"
+    }
+  ],
+  "address": [
+    {
+      "city": "Bangalore",
+      "country": "IN"
+    }
+  ]
+}
